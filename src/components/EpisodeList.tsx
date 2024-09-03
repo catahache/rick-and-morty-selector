@@ -27,7 +27,7 @@ export function EpisodeList({
   return (
     <div className="flex-1 flex flex-col p-4 overflow-hidden">
       <h3 className={`text-xl mb-2 ${titleClassName}`}>{title}</h3>
-      <div className="flex-1 overflow-auto">
+      <div className="flex-1 overflow-auto p-2">
         {isLoading ? (
           <div className="space-y-2">
             {skeletonArray.map((_, index) => (
