@@ -1,0 +1,43 @@
+@keyframes shake {
+    0% { transform: translateX(0) scale(1.05); }
+    25% { transform: translateX(-5px) scale(1.05); }
+    50% { transform: translateX(5px) scale(1.05); }
+    75% { transform: translateX(-5px) scale(1.05); }
+    100% { transform: translateX(0) scale(1.05); }
+  }
+  
+  .character-card {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .character-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .character-card.selected {
+    animation: shake 0.5s ease-in-out;
+    transform: scale(1.05);
+    box-shadow: 0 0 0 2px rgb(255, 25, 243);
+  }
+  
+  .character-card.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .character-card.disabled img {
+    filter: grayscale(100%);
+  }
+
+  .navigation-button {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .navigation-button:hover:not(:disabled) {
+    background-color: rgb(255, 25, 243);
+    color: white;
+  }
+  
+  .navigation-button:disabled {
+    opacity: 0.5;
+  }
