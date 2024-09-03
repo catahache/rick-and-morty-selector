@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://rickandmortyapi.com';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export async function fetchApi<T>(endpoint: string, params: Record<string, string> = {}): Promise<T> {
   const url = new URL(`/api${endpoint}`, API_BASE_URL);
